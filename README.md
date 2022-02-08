@@ -7,6 +7,7 @@ La aplicación está desarrollada en Flask(python) y realiza un request sobre el
 Sobre CI-CD 📦
 
 Se implemento un pipeline (Jenkinsfile) en suite de Jenkins, la cual se compone de tres stages:
+   
     * Stage Build: Descargamos el código desde su repositorio en Github
     * Test Stage: Ejecuta las pruebas unitarias para la aplicación Flask, validando que la respuesta al endpoint de "/seguro" sea un 200
     * Deploy Stage: Ejecuta la aplicación Flask en nohup y agregue la salida a log.txt
