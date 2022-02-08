@@ -4,8 +4,6 @@ Sobre la aplicacion ⚙️
 
 La aplicación está desarrollada en Flask(python) y realiza un request sobre el endpoint proporcionado, el resultado de este request es parseado a json el cual es utilizado para construir el HTML con dicha información.
 
-Para probar la funcionalidad de la aplicación se debe acceder a la siguiente URL y hacer click en el boton "Consultar API"
-
 Sobre CI-CD 📦
 
 Se implemento un pipeline (Jenkinsfile) en suite de Jenkins, la cual se compone de tres stages:
@@ -16,4 +14,4 @@ Se implemento un pipeline (Jenkinsfile) en suite de Jenkins, la cual se compone 
 
 Sobre el flujo de Git. 🚀
 
-Para esta prueba no se implementó gitflow ya que la funcionalidad a desarrollar era solo una, el pipeline se ejecuta con cualquier commit que se haga sobre master.
+Para esta prueba no se implementó gitflow ya que la funcionalidad a desarrollar era solo una, el pipeline se ejecuta con cualquier commit que se haga sobre main.
