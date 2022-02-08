@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bice Vida DevOps</title>
+</head>
+<!-- 
+Valida recepción de datos desde script Python.
+Si recibe datos genera esquema HTML con información recibida desde el JSON, de lo contrario, entrega mensaje de error
+-->
+<body style="background-color: #002859;">
+    <h3 style="color: #85ab4b;">Seguro Bice Vida</h3>
+    {% if seguro %}
+    
+    <style type="text/css">
+        .tg  {border-collapse:collapse;border-spacing:0;}
+        .tg td{border-color:rgba(255, 255, 255, 0);border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+          overflow:hidden;padding:10px 5px;word-break:normal;}
+        .tg th{border-color:rgba(255, 255, 255, 0);border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+          font-weight:normal;overflow:hidden;padding:10px 5px;word-break:normal;}
+        .tg .tg-0lax{text-align:left;vertical-align:top}
+        </style>
+        <table class="tg">
+        <thead>
+          <tr>
+            <th class="tg-0lax"><p style="color: white;">Nombre Seguro:</p></th>
+            <th class="tg-0lax"><p style="color: white;">{{ seguro ["insurance"]["name"]}}</p></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="tg-0lax"><p style="color: white;">Descripción:</p></td>
+            <td class="tg-0lax"><p style="color: white;">{{ seguro ["insurance"]["description"]}}</p></td>
+          </tr>
+          <tr>
+            <td class="tg-0lax"><p style="color: white;">Precio:</p></td>
+            <td class="tg-0lax"><p style="color: white;">{{ seguro ["insurance"]["price"]}}</p></td>
+          </tr>
+          <tr>
+            <td class="tg-0lax"><p style="color: white;">Imagen Referencia:</p></td>
+            <td class="tg-0lax"><img src={{ seguro ["insurance"]["image"]}} height="100" width="100"></td>
+          </tr>
+        </tbody>
+        </table>
+    {% else %}
+    <p>No hay seguros</p>
+    {% endif %}
+</body>
+<footer>
+    <p style="color: whitesmoke;">Autor: Rodrigo Olmos</p>
+    <img src="https://cdn.bicevida.cl/wp-content/uploads/2020/10/bicente.png" alt="alternatetext" height="200" width="600">
+  </footer> 
+</html>
